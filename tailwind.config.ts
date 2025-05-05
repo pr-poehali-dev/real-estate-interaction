@@ -1,4 +1,3 @@
-
 import { type Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
@@ -90,4 +89,4 @@ export default {
       addVariant("has-[[data-variant=inset]]", ":has([data-variant=inset])")
     }),
   ]
-} satisfies Config
+} satisfies Config;
