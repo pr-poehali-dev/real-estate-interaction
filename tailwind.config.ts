@@ -1,5 +1,5 @@
+
 import { type Config } from "tailwindcss";
-import plugin from "tailwindcss/plugin";
 
 export default {
   darkMode: ["class"],
@@ -53,14 +53,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,9 +76,6 @@ export default {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    plugin(({ addVariant }) => {
-      addVariant("has-[[data-variant=inset]]", ":has([data-variant=inset])")
-    }),
+    require("tailwindcss-animate")
   ]
-} satisfies Config;
+} satisfies Config
